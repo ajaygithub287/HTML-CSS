@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div Example</title>
+    <style>
+        /* Styling the unique div with ID */
+        #div1 {
+            width: 300px;
+            height: 100px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Styling all divs with class div1 */
+        .div1 {
+            width: 200px;
+            height: 80px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+            font-size: 18px;
+            margin: 10px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* Flexbox to center content */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Unique ID div -->
+        <div id="div1">I am div with ID</div>
+
+        <!-- Multiple divs with class -->
+        <div class="div1" onclick="changeText(this)">Click Me 1</div>
+        <div class="div1" onclick="changeText(this)">Click Me 2</div>
+        <div class="div1" onclick="changeText(this)">Click Me 3</div>
+    </div>
+
+    <script>
+        // JavaScript function to change text on click
+        function changeText(element) {
+            element.innerHTML = "Clicked!";
+            element.style.backgroundColor = "red";
+        }
+    </script>
+
+</body>
+</html>
